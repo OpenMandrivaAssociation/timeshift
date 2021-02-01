@@ -1,14 +1,11 @@
 Name:           timeshift
-Version:        20.03
-Release:        %mkrel 1
+Version:        20.11.1
+Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
-License:        GPLv3+ or LGPLv3+
+License:        GPLv3+
 URL:            https://github.com/teejee2008/timeshift
-Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-
-# https://github.com/teejee2008/timeshift/pull/566
-Patch0:         timeshift-20.03-timeshift-pt_BR.po-Fix-newlines.patch
+Source0:        https://github.com/teejee2008/timeshift/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -85,8 +82,6 @@ rm -rf %{buildroot}%{_datadir}/appdata
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/*.appdata.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}-gtk.desktop
 
-
-%if 0%{?rhel} && 0%{?rhel} <= 7
 %post
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
@@ -98,8 +93,6 @@ fi
 
 %posttrans
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-%endif
-
 
 %files -f %{name}.lang
 %license COPYING LICENSE.md
