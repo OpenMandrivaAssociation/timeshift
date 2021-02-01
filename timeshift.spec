@@ -107,4 +107,4 @@ fi
 %ghost %attr(644, root, root) %{_sysconfdir}/cron.d/timeshift-boot
 %ghost %attr(644, root, root) %{_sysconfdir}/cron.d/timeshift-hourly
 %ghost %attr(664, root, root) %{_sysconfdir}/timeshift.json
-%config %{_sysconfdir}/default/timeshift.json
+#config #{_sysconfdir}/default/timeshift.json
