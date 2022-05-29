@@ -1,5 +1,5 @@
 Name:           timeshift
-Version:        20.11.1
+Version:        22.06.1
 Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
@@ -101,6 +101,7 @@ fi
 %{_datadir}/metainfo/*.appdata.xml
 %{_datadir}/applications/*
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/pixmaps/%{name}.png
 %{_datadir}/polkit-1/actions/*.policy
 %{_datadir}/%{name}
 %{_mandir}/man1/%{name}.1*
