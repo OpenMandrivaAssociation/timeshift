@@ -101,6 +101,7 @@ fi
 %{_datadir}/metainfo/*.appdata.xml
 %{_datadir}/applications/*
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/pixmaps/%{name}.png
 %{_datadir}/polkit-1/actions/*.policy
 %{_datadir}/%{name}
 %{_mandir}/man1/%{name}.1*
