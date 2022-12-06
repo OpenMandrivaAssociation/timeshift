@@ -1,11 +1,12 @@
 Name:           timeshift
-Version:        22.06.6
+Version:        22.11.1
 Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
 License:        GPLv3+
 URL:            https://github.com/teejee2008/timeshift
-Source0:        https://github.com/teejee2008/timeshift/archive/v%{version}/%{name}-%{version}.tar.gz
+#Source0:        https://github.com/teejee2008/timeshift/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/linuxmint/timeshift/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
