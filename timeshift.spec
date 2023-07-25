@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(vte-2.91)
+BuildRequires:  pkgconfig(xapp)
 BuildRequires:  vala
 Requires:       cronie
 Requires:       hicolor-icon-theme
