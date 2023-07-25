@@ -8,6 +8,7 @@ URL:            https://github.com/teejee2008/timeshift
 #Source0:        https://github.com/teejee2008/timeshift/archive/v%{version}/%{name}-%{version}.tar.gz
 Source0:        https://github.com/linuxmint/timeshift/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:  meson
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  appstream-util
@@ -44,35 +45,13 @@ Ubuntu-type subvolume layout (with @ and @home subvolumes).
 
 %prep
 %autosetup -p1
-sed -i -e 's@--thread @@g' src/makefile
-sed -i -e 's@--Xcc="-O3" @@g' src/makefile
-sed -i '/${app_name}-uninstall/d' src/makefile
-
 
 %build
-for flag in %{optflags} %{?__global_ldflags}; do
-  VALAFLAGS="$VALAFLAGS -X $flag"
-done
-
-# Inject Fedora compiler flags and the debug option to valac.
-# Just dump the c-sources.
-sed -i "s|^[\t ]*valac|& --ccode --save-temps -g $VALAFLAGS|" src/makefile
-%make_build
-
-# Move generated c-sources into flat tree so it can be picked
-# up for -debugsource.
-for f in `find src/ -type f -name '*.c'`; do
-  mv -f $f src/
-done
-
-# Inject Fedora compiler flags and the debug option to valac
-# Build the binaries.
-sed -i "s|valac --ccode|valac|" src/makefile
-%make_build
-
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 # Remove duplicate
 rm -rf %{buildroot}%{_datadir}/appdata
 
