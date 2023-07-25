@@ -21,7 +21,8 @@ BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(vte-2.91)
-BuildRequires:  pkgconfig(xapp)
+# Sit in unsupported repo, disable it for now.
+#BuildRequires:  pkgconfig(xapp)
 BuildRequires:  vala
 Requires:       cronie
 Requires:       hicolor-icon-theme
@@ -49,7 +50,7 @@ Ubuntu-type subvolume layout (with @ and @home subvolumes).
 %autosetup -p1
 
 %build
-%meson
+%meson -Dxapp=false
 %meson_build
 
 %install
