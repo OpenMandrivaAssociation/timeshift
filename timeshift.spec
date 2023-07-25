@@ -11,6 +11,7 @@ Source0:        https://github.com/linuxmint/timeshift/archive/refs/tags/v%{vers
 BuildRequires:  meson
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
+BuildRequires:  help2man
 BuildRequires:  appstream-util
 BuildRequires:  typelib(AppStreamGlib)
 BuildRequires:  pkgconfig(json-glib-1.0)
