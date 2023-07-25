@@ -86,6 +86,7 @@ fi
 %{_datadir}/polkit-1/actions/*.policy
 %{_datadir}/%{name}
 %{_mandir}/man1/%{name}.1*
+%{_mandir}/man1/timeshift-gtk.1.*
 %ghost %attr(644, root, root) %{_sysconfdir}/cron.d/timeshift-boot
 %ghost %attr(644, root, root) %{_sysconfdir}/cron.d/timeshift-hourly
 %ghost %attr(664, root, root) %{_sysconfdir}/timeshift.json
