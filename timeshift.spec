@@ -77,7 +77,6 @@ fi
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %files -f %{name}.lang
-%license COPYING LICENSE.md
 %doc AUTHORS README.md
 %{_bindir}/*
 %{_datadir}/metainfo/*.appdata.xml
