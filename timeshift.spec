@@ -1,5 +1,5 @@
 Name:           timeshift
-Version:        23.12.2
+Version:        24.01.1
 Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
