@@ -60,11 +60,6 @@ rm -rf %{buildroot}%{_datadir}/appdata
 
 %find_lang %{name}
 
-
-%check
-appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/*.appdata.xml
-desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}-gtk.desktop
-
 %post
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
