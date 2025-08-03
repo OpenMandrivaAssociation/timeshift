@@ -75,7 +75,7 @@ fi
 %files -f %{name}.lang
 %doc AUTHORS README.md
 %{_bindir}/*
-#{_datadir}/metainfo/*.appdata.xml
+%{_datadir}/metainfo/com.linuxmint.timeshift.metainfo.xml
 %{_datadir}/applications/*
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/pixmaps/%{name}.png
