@@ -1,12 +1,12 @@
 Name:           timeshift
-Version:        25.12.4
+Version:        26.09.0
 Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
 License:        GPLv3+
 URL:            https://github.com/teejee2008/timeshift
-#Source0:        https://github.com/teejee2008/timeshift/archive/v%{version}/%{name}-%{version}.tar.gz
-Source0:        https://github.com/linuxmint/timeshift/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+# Upstream tags are unprefixed (26.09.0, not v26.09.0).
+Source0:        https://github.com/linuxmint/timeshift/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  desktop-file-utils
@@ -15,7 +15,6 @@ BuildRequires:  help2man
 BuildRequires:  appstream-util
 BuildRequires:  typelib(AppStreamGlib)
 BuildRequires:  pkgconfig(json-glib-1.0)
-BuildRequires:  pkgconfig(libsoup-2.4)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
