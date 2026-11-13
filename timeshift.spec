@@ -1,5 +1,5 @@
 Name:           timeshift
-Version:        26.09.0
+Version:        26.11.0
 Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
@@ -20,14 +20,14 @@ BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(vte-2.91)
-# Sit in unsupported repo, disable it for now.
-#BuildRequires:  pkgconfig(xapp)
+BuildRequires:  pkgconfig(xapp)
 BuildRequires:  vala
 Requires:       cronie
 Requires:       hicolor-icon-theme
 Requires:       polkit
 Requires:       psmisc
 Requires:       rsync
+Requires:	xapp-symbolic-icons
 
 %description
 Timeshift for Linux is an application that provides functionality similar to
