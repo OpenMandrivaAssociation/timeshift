@@ -1,6 +1,6 @@
 Name:           timeshift
 Version:        26.11.0
-Release:        2
+Release:        3
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
 License:        GPLv3+
@@ -27,8 +27,7 @@ Requires:       hicolor-icon-theme
 Requires:       polkit
 Requires:       psmisc
 Requires:       rsync
-#Change xapp-symbolic-icons to recommends as not in main
-Recommends:	xapp-symbolic-icons
+Requires:	xapp-symbolic-icons
 
 %description
 Timeshift for Linux is an application that provides functionality similar to
