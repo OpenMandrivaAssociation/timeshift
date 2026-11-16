@@ -1,6 +1,6 @@
 Name:           timeshift
-Version:        26.11.0
-Release:        3
+Version:        26.11.1
+Release:        1
 Summary:        System restore tool for Linux
 Group:          Archiving/Backup
 License:        GPLv3+
